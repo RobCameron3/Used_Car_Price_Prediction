@@ -1,85 +1,71 @@
-Used Car Price Prediction
+🚗 Used Car Price Prediction
+🧠 Overview
+This project predicts used car prices using a regression-based machine learning model. The goal is to help businesses align pricing with market value and customer expectations to improve profitability. By identifying the features that influence price, the model supports smarter decisions in acquisition, pricing, and retention.
 
-Overview
+📊 Business Relevance
+Accurate price prediction affects several core metrics:
 
-This project focuses on predicting used car prices using a regression-based machine learning approach. The goal is to help businesses align car pricing with market value and customer expectations, improving overall profitability. By identifying which features drive pricing, the model allows for data-backed strategic decisions in customer acquisition, pricing, and retention.
+CAC (Customer Acquisition Cost): Lower costs by targeting and converting the right customers faster through optimized pricing.
 
-Business Relevance
+CLTV (Customer Lifetime Value): Improve satisfaction and retention by aligning prices with customer expectations.
 
-Accurate price prediction models impact several business metrics:
+MRR (Monthly Recurring Revenue): Stabilize income through consistent pricing in car programs or financing.
 
-CAC (Customer Acquisition Cost): Lower acquisition cost by targeting and converting the right customers faster using optimized pricing.
+Churn Rate: Reduce drop-off by preventing pricing inconsistencies that frustrate customers.
 
-CLTV (Customer Lifetime Value): Boost long-term satisfaction and retention by aligning prices with value expectations.
+ARPU (Average Revenue Per User): Increase per-user revenue through tiered pricing and upsells.
 
-MRR (Monthly Recurring Revenue): Create consistent pricing models to help stabilize revenue from recurring used car programs or financing plans.
+ROI (Return on Investment): Use predictive insights to guide inventory, marketing, and customer service investments.
 
-Churn Rate: Reduce churn by preventing customer frustration caused by pricing inconsistencies.
-
-ARPU (Average Revenue Per User): Raise average revenue by offering tiered pricing or upsell strategies based on predicted price sensitivity.
-
-ROI (Return on Investment): Optimize business investments in inventory, marketing, and customer service by using predictive insights.
-
-Dataset Information
-
-The dataset contains 26 columns with features like:
+🗂️ Dataset Information
+Source: Kaggle
+Features:
 
 Categorical: fuel type, engine type, car body, drive wheel, aspiration
 
-Numerical: car width, engine size, horsepower, curb weight, mileage (city/highway), price
+Numerical: car width, engine size, horsepower, curb weight, city/highway mileage, price
 
-Source: Kaggle Dataset
+🛠️ Methodology
+🧼 Data Cleaning & EDA
+Removed nulls, outliers, and normalized skewed distributions
 
-Methodology
+Visualized relationships using heatmaps and scatter plots
 
-Data Cleaning & Exploration:
-
-Checked for nulls, outliers, and skewness
-
-Explored feature relationships through correlation heatmaps and scatterplots
-
-Feature Engineering:
-
-Log transformation on price to normalize skew
+🏗️ Feature Engineering
+Applied log transformation to normalize price
 
 Dummified categorical variables
 
-Multicollinearity Checks:
+🧪 Multicollinearity
+Used VIF (Variance Inflation Factor) to remove highly correlated features
 
-VIF (Variance Inflation Factor) analysis to drop highly correlated features
+📈 Modeling
+Built OLS Linear Regression with statsmodels
 
-Modeling:
+Evaluated using R², RMSE, MAE, and MAPE
 
-Used OLS Linear Regression via statsmodels
-
-Evaluated using R-squared, RMSE, MAE, and MAPE
-
-Validation:
-
+✅ Validation
 Performed k-fold cross-validation
 
-Analyzed residuals for homoskedasticity and normality
+Checked residual plots for homoskedasticity and normality
 
-Key Findings
+🔍 Key Findings
+Price increases with car width, engine size, and horsepower
 
-Features like car width, engine size, and horsepower have strong positive relationships with price.
+Car length and stroke were negatively correlated with price
 
-Car length and stroke showed negative relationships with price.
+Log transformation significantly improved model fit
 
-Log-transformed price improved model performance.
+Achieved R² = 0.85 with MAPE ≈ 15%
 
-Final model achieved R-squared around 0.85 with low MAPE (~15%).
+💡 Takeaways
+Enables dynamic vehicle valuation based on input features
 
-Takeaways
+Supports price tiering and feature/package optimization
 
-The model enables businesses to assess the value of individual vehicles with precision.
+Equips businesses with a foundation for revenue-focused pricing strategy
 
-Pricing decisions can be made dynamically based on predicted price tiers.
-
-Businesses can test how changes in features or packages affect customer-perceived value.
-
-Tools Used
-
+🧰 Tools & Technologies
 Python (Pandas, NumPy, Matplotlib, Seaborn, Statsmodels, Sklearn)
 
 Jupyter Notebook
