@@ -57,6 +57,17 @@ The dataset contains 26 columns with features like:
 - Log transformation significantly improved model fit  
 - Achieved **R² ≈ 0.85** with **MAPE ≈ 15%**
 
+## 📊 How Visuals Supported Business Impact
+
+Over 30 graphs were generated to support insight discovery and business decisions:
+
+- **Heatmaps & scatterplots:** Identified key predictors like engine size and horsepower that positively impact price (used to optimize ARPU and CLTV).
+- **Boxplots & distribution charts:** Detected outliers and skewness, helping clean data for more reliable pricing predictions (improves ROI and reduces CAC).
+- **VIF bar graphs:** Diagnosed multicollinearity to remove noisy features, sharpening the model’s focus (supports better CAC targeting).
+- **Residual plots & k-fold visuals:** Validated model accuracy and fairness, essential to lowering Churn Rate and sustaining MRR.
+
+These visuals translated complex data into business-friendly insights, helping stakeholders build confidence in the model and pricing strategy.
+
 ## 🧠 Takeaways
 
 - Enables dynamic vehicle valuation based on input features  
